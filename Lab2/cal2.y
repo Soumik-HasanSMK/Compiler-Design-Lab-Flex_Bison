@@ -4,11 +4,14 @@ void yyerror(char *s);
 int yylex();
 %}
 
-%token NUM ADD
+%token NUM ADD MUL
 %start cal
 
 %%
-cal: NUM ADD NUM {$$ = $1 + $3; printf("%d\n", $$);}
+cal:
+  | cal line
+  line: NUM ADD NUM MUL NUM {$$ = $1 + $3 * $5; printf("%d\n", $$);}
+    | NUM ADD NUM MUL NUM '\n' {$$ = $1 + $3 * $5; printf("%d\n", $$);}
     ;
 %%
 

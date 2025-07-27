@@ -4,14 +4,16 @@
 //Roll Number: 1703xxx
 //
 #include "cal2.tab.h"
+#include<stdlib.h>
 %}
 
 digit [0-9]
 delim [ \t]
 
 %%
-{digit}{digit}* { yylval = atoi(yytext); return(NUM);}
+{digit}+ { yylval = atoi(yytext); return(NUM);}
 "+" {return(ADD);}
-{delim} {}
+"*" {return(MUL);}
+{delim}+ {}
 %%
 

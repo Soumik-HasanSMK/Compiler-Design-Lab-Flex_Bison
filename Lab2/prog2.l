@@ -13,6 +13,7 @@ float_num {num}*[.]{num}
 %%
 {num} {printf("%s -> NUMBER\n", yytext);}
 "+" {printf("%s -> ADD\n", yytext);}
+"*" {printf("%s -> MUL\n", yytext);}
 "int" {printf("%s -> INT\n", yytext);}
 "float" {printf("%s -> FLOAT\n", yytext);}
 "while" {printf("%s -> WHILE\n", yytext);}

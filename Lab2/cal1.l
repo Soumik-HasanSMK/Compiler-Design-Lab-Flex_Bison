@@ -1,7 +1,7 @@
 %option noyywrap
 
 %{
-//Roll Number: 1703xxx
+//Roll Number: 34
 //
 %}
 
@@ -11,6 +11,7 @@ delim [ \t]
 %%
 {digit}{digit}* {printf("%s -> NUMBER\n", yytext);}
 "+" {printf("%s -> ADD\n", yytext);}
+"*" {printf("%s -> MUL\n", yytext);}
 {delim} {}
 %%
 
