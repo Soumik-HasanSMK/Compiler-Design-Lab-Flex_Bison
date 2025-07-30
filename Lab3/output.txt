@@ -1,10 +1,14 @@
-NUM 1=1
-term 1=1
 NUM 2=2
-exp ADD term 1+2=3
-NUM 3=3
-exp ADD term 3+3=6
-RESULT = 6
+term 2=2
+NUM 5=5
+term MUL NUM 5*4=20
+exp ADD term 2+20=22
+RESULT = 22
+NUM 40=40
+term DIV NUM 40/5=8
+term MUL NUM 8*2=16
+term 16=16
+RESULT = 16
 NUM 2=2
 term 2=2
 NUM 3=3
