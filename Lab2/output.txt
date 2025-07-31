@@ -1,4 +1,11 @@
+2 -> NUMBER
++ -> ADD
+12 -> NUMBER
+* -> MUL
+5 -> NUMBER
 
-62
-73
-Parsing Finished
+1 -> NUMBER
++ -> ADD
+12 -> NUMBER
+* -> MUL
+6 -> NUMBER
